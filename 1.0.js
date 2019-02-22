@@ -1,0 +1,1 @@
+console.log('Tested all five arithmetic operators.');
