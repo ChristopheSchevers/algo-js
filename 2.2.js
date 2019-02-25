@@ -1,8 +1,8 @@
 const readlineSync = require("readline-sync");
 
-let min = readlineSync.question("Please enter an minimum value. ");
-let max = readlineSync.question("Please enter an maximum value. ");
-let current = readlineSync.question("Please enter the current value. ");
+let min = Number(readlineSync.question("Please enter an minimum value. "));
+let max = Number(readlineSync.question("Please enter an maximum value. "));
+let current = Number(readlineSync.question("Please enter the current value. "));
 
 if (min > max) {
     console.log("Error: It appears you don't understand anything. Goodbye.");
