@@ -11,7 +11,7 @@ function calcDistance (x1,x2,y1,y2) {
 
     // Math.round() rounds the result to 2 decimals
     result = Math.round(Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) * 100) / 100;
-    return `Point A =[${x1}, ${y1}], point B = [${x2}, ${y2}] => ${result}`
+    return `Point A =[${x1}, ${y1}], point B = [${x2}, ${y2}] => ${result}`;
 }
 
 // Calls function and prints result to console
