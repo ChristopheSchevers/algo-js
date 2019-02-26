@@ -18,7 +18,7 @@ function multiRand(n) {
 
 // Function to get average of global array
 function average() {
-    return arr.reduce((a, b) => a +b, 0)/arr.length;
+    return arr.reduce((a, b) => a + b, 0)/arr.length;
 }
 
 // Function to get minimum value of global array
