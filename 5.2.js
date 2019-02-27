@@ -1,5 +1,8 @@
 const readlineSync = require("readline-sync");
 
+// Variable to retrieve current time
+let d = new Date();
+
 // Object to store data to
 let tvSerie = {
     name: "",
@@ -47,7 +50,8 @@ function randomizeCast() {
 function newCast () {
     // Questions for new name and productionY
     tvSerie.name = readlineSync.question("Please enter name for tv series with new cast. ");
-    tvSerie.productionY = readlineSync.question("Please enter production year for tv series with new cast. ");
+    // Function to get year from global d variable to set current year
+    tvSerie.productionY = d.getFullYear();
     // castMember will be set to the result of randomizeCast()
     tvSerie.castMember = randomizeCast();
 
