@@ -43,7 +43,7 @@ class Circle {
     }
 
     calcSurface() {
-        return Math.PI * (this.radius)**2;
+        return Math.PI * Math.pow(this.radius,2);
     }
 
 }
