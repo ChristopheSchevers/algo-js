@@ -33,7 +33,7 @@ function pizzaFlavor() {
         // Do while loop breaks when "X" is entered and returns to menu
         do {
         flavs.push(readlineSync.question("Please enter pizza flavor. "));
-        console.log("Enter X to return or press enter to add another pizza flavor.")
+        console.log("Enter X to return or press enter to add another pizza flavor.");
         } while (readlineSync.question() != "X")
         pizzaFlavor();
     }
