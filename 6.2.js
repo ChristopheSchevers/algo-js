@@ -1,24 +1,26 @@
 class Rectangle {
     constructor (topLeftXPos, topLeftYPos, height, width) {
-        this.topLeftXPos = topLeftXPos;
-        this.topLeftYPos = topLeftYPos;
+        this.x1 = topLeftXPos;
+        this.y1 = topLeftYPos;
         this.height = height;
         this.width = width;
+        this.x2 = this.x1 + width;
+        this.y2 = this.y1 + height;
     }
 
     collides(otherRectangle) {
-        if (this.topLeftXPos < otherRectangle.topLeftXPos + otherRectangle.width &&
-            this.topLeftXPos + this.width > otherRectangle.topLeftXPos &&
-            this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.height &&
-            this.topLeftYPos + this.height > otherRectangle.topLeftYPos) {
-            return true;
+        if (this.x1 < otherRectangle.x2 &&
+            this.x2 > otherRectangle.x1 &&
+            this.y1 < otherRectangle.y2 &&
+            this.y2 > otherRectangle.y1) {
+            console.log("collides");
+            console.log(this.x1 < otherRectangle.x2,this.x2 > otherRectangle.x1,this.y1 < otherRectangle.y2,this.y2 > otherRectangle.y1);
+        } else {
+            console.log("does not collapse");
         }
     }
 }
 
-const rectangle = new Rectangle(1,6,4,6);
-const otherRectangle = new Rectangle(4,5,2,4);
-
-console.log(rectangle);
-console.log(otherRectangle);
-console.log(JSON.stringify(rectangle.collides));
+const rectangle = new Rectangle(0,0,42,42);
+const otherRectangle = new Rectangle(0,41,42,42);
+rectangle.collides(otherRectangle);
